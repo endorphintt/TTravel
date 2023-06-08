@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
+@keyframes firstBorder {
+    0%{
+        width: calc(70px + 16px);
+        height: calc(70px + 16px);
+        border: 8px solid rgba(68, 142, 188, 0.486);
+    }
+    50%{
+        width: calc(70px + 20px);
+        height: calc(70px + 20px);
+        border: 10px solid rgba(68, 142, 188, 0.486);
+    }
+    0%{
+        width: calc(70px + 16px);
+        height: calc(70px + 16px);
+        border: 8px solid rgba(68, 142, 188, 0.486);
+    }
+} 
+
+.start{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20vh;
+    font-family: 'Tilt Prism';
+}
+
+.button{
+    scale: 1.3;
+    position: relative;
+    width: calc(70px + 16px);
+    height: calc(70px + 16px);
+    border: 8px solid #448ebc7c;
+    border-radius: 50%;
+    background-color: rgba(14, 47, 47, 0.548);
+    color: white;
+    letter-spacing: 2px;
+    font-size: 18px;
+    transition: 1s;
+    box-sizing: border-box;
+    font-family: 'Tilt Prism';
+    font-weight: 700;
+    animation: firstBorder 1s infinite;
+    &::after{
+        position: absolute;
+        content: '';
+        width: calc(70px + 16px + 20px);
+        height: calc(70px + 16px + 20px);
+        background-color: rgba(0, 255, 255, 0.363);
+        border-radius: 50%;
+        left: -17.5px;
+        top: -17.5px;
+        z-index: -1;
+    }
+}
+
+

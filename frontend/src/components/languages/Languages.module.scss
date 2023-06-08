@@ -1,0 +1,28 @@
+.container{
+    position: absolute;
+    left: 100vw;
+    top: 50vh;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.buttons_container{
+    display: flex;
+    justify-content: space-between;
+    min-width: 240px;
+    padding: 5px;
+    align-items: center;
+    margin-bottom: 20vh;
+}
+
+.button{
+    width: 50px;
+    background: transparent;
+    border: none;
+    & img{
+        width: 100%;
+    }
+}
