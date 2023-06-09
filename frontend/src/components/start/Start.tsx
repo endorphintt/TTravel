@@ -7,7 +7,7 @@ type Props = {
 const Start: React.FC<Props> = ({scroll}) => {
     return (
         <div className={c.start}>
-            <button className={c.button} onClick={scroll}>start</button>
+            <button className={c.button} onClick={scroll}><span className={c.text}>start</span></button>
         </div>
     )
 }

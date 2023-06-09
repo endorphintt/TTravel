@@ -28,7 +28,7 @@ const Rocket: React.FC = () => {
           <img className={c.rocket_} src="./rocket2.png" alt="rocket" />
           <Start scroll={() => setLanguage(true)} />
           <Cities />
-          <Languages chooseLanguage={(lan): void => setSelectedLanguage(lan)}  scroll={() => setCities(true)} />
+          <Languages isLanguage={isLanguage} chooseLanguage={(lan): void => setSelectedLanguage(lan)}  scroll={() => setCities(true)} />
         </div>
       }
     </div>
