@@ -9,9 +9,10 @@ import Languages from '../../components/languages/Languages'
 
 
 const Rocket: React.FC = () => {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   const [isCities, setCities] = useState(false)
   const [isLanguage, setLanguage] = useState(false)
+  const [isMain, setMain] = useState(false)
   const [selectedLanguage, setSelectedLanguage] = useState("")
 
   useEffect(() => {
@@ -24,10 +25,15 @@ const Rocket: React.FC = () => {
       {loading ? 
         <IntroRocket />
         :
-        <div className={isLanguage && isCities ? c.container_cities : isLanguage ? c.container_languages : c.container}>
+        <div className={isLanguage && isCities && isMain ? c.container_main : isLanguage && isCities ? c.container_cities : isLanguage ? c.container_languages : c.container}>
+          <div className={c.stars}></div>
+          <div className={c.stars}></div>
+          <div className={c.stars}></div>
+          <div className={c.stars}></div>
+          <div className={c.stars}></div>
           <img className={c.rocket_} src="./rocket2.png" alt="rocket" />
           <Start scroll={() => setLanguage(true)} />
-          <Cities />
+          <Cities setMain={() => setMain(true)}/>
           <Languages isLanguage={isLanguage} chooseLanguage={(lan): void => setSelectedLanguage(lan)}  scroll={() => setCities(true)} />
         </div>
       }
